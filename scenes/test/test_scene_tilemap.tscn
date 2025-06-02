@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=4 uid="uid://btoqpu2bcwprf"]
+
+[sub_resource type="TileSet" id="TileSet_osd2o"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+
+[node name="TestSceneTilemap" type="Node2D"]
+
+[node name="Tilemap" type="Node2D" parent="."]
+
+[node name="GroundLayer" type="TileMapLayer" parent="Tilemap"]
+tile_map_data = PackedByteArray("AAD9////AQACAAEAAAD+////AQACAAAAAAD+//7/AQAAAAAAAAD///7/AQAAAAMAAAD/////AQAAAAAAAAD9//7/AQADAAAAAAA=")
+tile_set = SubResource("TileSet_osd2o")
+
+[node name="ElevationLayer" type="TileMapLayer" parent="Tilemap"]
