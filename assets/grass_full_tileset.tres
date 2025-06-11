@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://besflauf4vx41"]
 
-[ext_resource type="Texture2D" uid="uid://cpvdr76jvgh6m" path="res://assets/tileset_full_grass.png" id="1_kxvv8"]
+[ext_resource type="Texture2D" uid="uid://cpvdr76jvgh6m" path="res://assets/grass_full_tileset.png" id="1_low7n"]
 [ext_resource type="Texture2D" uid="uid://dqsldr52sos33" path="res://assets/tilled_full_tileset.png" id="2_low7n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1akv"]
-texture = ExtResource("1_kxvv8")
+texture = ExtResource("1_low7n")
 texture_region_size = Vector2i(32, 32)
 0:4/0 = 0
 0:4/0/texture_origin = Vector2i(0, -8)

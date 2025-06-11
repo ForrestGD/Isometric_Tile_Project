@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpvdr76jvgh6m"
-path="res://.godot/imported/tileset_full_grass.png-18f22c38569432fd36bdff00463e033a.ctex"
+path="res://.godot/imported/grass_full_tileset.png-36787d47ac44d11201bbf99215927a36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset_full_grass.png"
-dest_files=["res://.godot/imported/tileset_full_grass.png-18f22c38569432fd36bdff00463e033a.ctex"]
+source_file="res://assets/grass_full_tileset.png"
+dest_files=["res://.godot/imported/grass_full_tileset.png-36787d47ac44d11201bbf99215927a36.ctex"]
 
 [params]
 
