@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqsldr52sos33"
-path="res://.godot/imported/tilled_full_tileset.png-17ed89ef39e3b81daa38b1d25358e9e1.ctex"
+uid="uid://b1yxx2t6x52wy"
+path="res://.godot/imported/witch_base_sprite.png-646f0e0faa354954a3c4105f020b9d7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilled_full_tileset.png"
-dest_files=["res://.godot/imported/tilled_full_tileset.png-17ed89ef39e3b81daa38b1d25358e9e1.ctex"]
+source_file="res://assets/sprites/witch_base_sprite.png"
+dest_files=["res://.godot/imported/witch_base_sprite.png-646f0e0faa354954a3c4105f020b9d7c.ctex"]
 
 [params]
 

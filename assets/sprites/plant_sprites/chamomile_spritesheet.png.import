@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ql7v20nu6vt"
-path="res://.godot/imported/2dneutral_point_light.webp-d6026f13f8a57aff05c39b3f2b12e49e.ctex"
+uid="uid://d0y8jkvfrww5k"
+path="res://.godot/imported/chamomile_spritesheet.png-8539c37096f3dde1453107a6fbfaa24f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2dneutral_point_light.webp"
-dest_files=["res://.godot/imported/2dneutral_point_light.webp-d6026f13f8a57aff05c39b3f2b12e49e.ctex"]
+source_file="res://assets/sprites/plant_sprites/chamomile_spritesheet.png"
+dest_files=["res://.godot/imported/chamomile_spritesheet.png-8539c37096f3dde1453107a6fbfaa24f.ctex"]
 
 [params]
 

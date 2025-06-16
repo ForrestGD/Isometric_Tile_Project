@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1yxx2t6x52wy"
-path="res://.godot/imported/witch_base_sprite.png-d3067bd0aa777840dc8f5634d2497b9a.ctex"
+uid="uid://cpvdr76jvgh6m"
+path="res://.godot/imported/grass_full_tileset.png-485f25aa2f927b81fd78055eda520b70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/witch_base_sprite.png"
-dest_files=["res://.godot/imported/witch_base_sprite.png-d3067bd0aa777840dc8f5634d2497b9a.ctex"]
+source_file="res://assets/tileset_assets/grass_full_tileset.png"
+dest_files=["res://.godot/imported/grass_full_tileset.png-485f25aa2f927b81fd78055eda520b70.ctex"]
 
 [params]
 
