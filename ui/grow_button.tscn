@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bo31c2mkc0ebi"]
+[gd_scene load_steps=2 format=3 uid="uid://bo31c2mkc0ebi"]
+
+[ext_resource type="Script" uid="uid://bitqsadj8oiuu" path="res://ui/grow_button.gd" id="1_tb2dv"]
 
 [node name="GrowButton" type="Control"]
 layout_mode = 3
@@ -21,3 +23,4 @@ grow_horizontal = 0
 layout_mode = 2
 text = "+1 Age
 "
+script = ExtResource("1_tb2dv")

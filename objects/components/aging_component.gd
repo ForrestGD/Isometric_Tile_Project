@@ -26,7 +26,7 @@ signal age_threshold_reached(new_scene : Node2D)
 @export var age_threshold = 1.0
 @export_file var next_scene
 
-const group_name = "AgingComponent"
+static var group_name = "AgingComponent"
 
 #internal members
 var _threshold_reached = false
@@ -38,6 +38,6 @@ func _ready():
 
 func _create_next_scene():
 	var instance : Node2D = load(next_scene).instantiate()
-	target.get_parent().set_child(instance)
+	target.get_parent().add_child(instance)
 	instance.global_transform = target.global_transform
 	return instance
