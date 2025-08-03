@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1n4qbji32h6l"]
+[gd_scene load_steps=3 format=3 uid="uid://b1n4qbji32h6l"]
 
 [ext_resource type="Texture2D" uid="uid://4rkkl4er36qd" path="res://assets/sprites/plant_sprites/chamomile_atlas.tres" id="1_13kqe"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_5l443"]
 
 [node name="ChamomileStage6" type="Area2D"]
 collision_layer = 128
@@ -15,3 +16,9 @@ region_rect = Rect2(192, 0, 32, 32)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(0, -8, 16, 0, 0, 8, -16, 0)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_5l443")
+age_threshold = 3.0
+next_scene = "uid://dcvrb34jurij3"
+metadata/_custom_type_script = "uid://bdv11jgtadcci"
