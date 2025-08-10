@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://mparqptd0gf7"]
+
+[ext_resource type="Texture2D" uid="uid://d32kegsg5rt6e" path="res://assets/sprites/plant_sprites/foxglove_sprites/foxglove_pink_spritesheet.png" id="1_ucx4m"]
+
+[resource]
+atlas = ExtResource("1_ucx4m")
