@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=4 uid="uid://btoqpu2bcwprf"]
+[gd_scene load_steps=9 format=4 uid="uid://btoqpu2bcwprf"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="2_j2mka"]
 [ext_resource type="PackedScene" uid="uid://bo31c2mkc0ebi" path="res://ui/grow_button.tscn" id="3_o1akv"]
 [ext_resource type="PackedScene" uid="uid://b44nx2gbyydpy" path="res://objects/plants/chamomile/chamomile_growth_0.tscn" id="4_6k3gh"]
 [ext_resource type="PackedScene" uid="uid://s1xrawfhwmig" path="res://objects/player_character/player_character.tscn" id="5_6k3gh"]
-[ext_resource type="PackedScene" uid="uid://dcvrb34jurij3" path="res://objects/plants/chamomile/chamomile_growth_1.tscn" id="5_l1rk5"]
 [ext_resource type="PackedScene" uid="uid://d05kolhlt7x1d" path="res://objects/plants/foxglove_pink/foxglove_pink_growth_0.tscn" id="6_l1rk5"]
+[ext_resource type="PackedScene" uid="uid://dohinlw5t2cib" path="res://objects/plants/foxglove_purple/foxglove_purple_growth_0.tscn" id="7_7apd7"]
+[ext_resource type="PackedScene" uid="uid://bhj7grr81t8i5" path="res://objects/plants/foxglove_white/foxglove_white_growth_0.tscn" id="7_xpen0"]
+[ext_resource type="PackedScene" uid="uid://clsqii1bg7rgi" path="res://objects/plants/lavender/lavender_growth_0.tscn" id="8_xpen0"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 y_sort_enabled = true
@@ -37,16 +39,16 @@ slide_on_ceiling = false
 [node name="GrowButton" parent="UIScreen" instance=ExtResource("3_o1akv")]
 
 [node name="ChamomileStage0" parent="." instance=ExtResource("4_6k3gh")]
-position = Vector2(84, -44)
-
-[node name="ChamomileStage1" parent="." instance=ExtResource("4_6k3gh")]
-position = Vector2(-16, 32)
-
-[node name="ChamomileStage2" parent="." instance=ExtResource("4_6k3gh")]
-position = Vector2(-27, 46)
-
-[node name="ChamomileStage3" parent="." instance=ExtResource("5_l1rk5")]
-position = Vector2(-67, -9)
+position = Vector2(-84, 49)
 
 [node name="FoxglovePinkStage0" parent="." instance=ExtResource("6_l1rk5")]
 position = Vector2(5, 50)
+
+[node name="FoxglovePurpleStage0" parent="." instance=ExtResource("7_7apd7")]
+position = Vector2(-14, 40)
+
+[node name="FoxgloveWhiteStage0" parent="." instance=ExtResource("7_xpen0")]
+position = Vector2(-28, 47)
+
+[node name="LavenderStage0" parent="." instance=ExtResource("8_xpen0")]
+position = Vector2(-96, 22)

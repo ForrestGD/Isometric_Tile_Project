@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0gh5dc3qxj16"]
+
+[ext_resource type="Texture2D" uid="uid://bwcbbegjh73kc" path="res://assets/sprites/plant_sprites/foxglove_sprites/foxglove_purple_atlas.tres" id="1_qb7ut"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_7fqhd"]
+
+[node name="FoxglovePurpleStage5" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qb7ut")
+offset = Vector2(0, -24)
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 48)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_7fqhd")
+next_scene = "uid://o5t2j0kpo1q6"
+metadata/_custom_type_script = "uid://bdv11jgtadcci"

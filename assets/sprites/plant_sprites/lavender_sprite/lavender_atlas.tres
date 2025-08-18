@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ce76cpu05lq3u"]
+
+[ext_resource type="Texture2D" uid="uid://b6tikojmfqmh3" path="res://assets/sprites/plant_sprites/lavender_sprite/lavender_spritesheet.png" id="1_db228"]
+
+[resource]
+atlas = ExtResource("1_db228")
