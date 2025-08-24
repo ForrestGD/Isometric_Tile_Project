@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://srl6edaj3hop"]
+
+[ext_resource type="Texture2D" uid="uid://ypixqagipm58" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_orange_atlas.tres" id="1_87d6h"]
+
+[node name="ChamomileStage5" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_87d6h")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)

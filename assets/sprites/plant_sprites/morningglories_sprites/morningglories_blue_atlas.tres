@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b5uhhcvnammdu"]
+
+[ext_resource type="Texture2D" uid="uid://ccyeqb3mned31" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_blue_spritesheet.png" id="1_5eif8"]
+
+[resource]
+atlas = ExtResource("1_5eif8")

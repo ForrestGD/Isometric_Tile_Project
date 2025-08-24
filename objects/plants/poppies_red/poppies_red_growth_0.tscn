@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://vka7uyk5xmux"]
+
+[ext_resource type="Texture2D" uid="uid://n0ukrs8khmub" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_red_atlas.tres" id="1_kkjkn"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_vk18i"]
+
+[node name="PoppiesRedStage0" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kkjkn")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_vk18i")
+next_scene = "uid://nlqe3oi4ivvw"

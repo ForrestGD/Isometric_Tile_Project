@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://btoqpu2bcwprf"]
+[gd_scene load_steps=20 format=4 uid="uid://btoqpu2bcwprf"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="2_j2mka"]
 [ext_resource type="PackedScene" uid="uid://bo31c2mkc0ebi" path="res://ui/grow_button.tscn" id="3_o1akv"]
@@ -8,6 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://dohinlw5t2cib" path="res://objects/plants/foxglove_purple/foxglove_purple_growth_0.tscn" id="7_7apd7"]
 [ext_resource type="PackedScene" uid="uid://bhj7grr81t8i5" path="res://objects/plants/foxglove_white/foxglove_white_growth_0.tscn" id="7_xpen0"]
 [ext_resource type="PackedScene" uid="uid://clsqii1bg7rgi" path="res://objects/plants/lavender/lavender_growth_0.tscn" id="8_xpen0"]
+[ext_resource type="PackedScene" uid="uid://dysse261kd7f1" path="res://objects/plants/morningglories_blue/morningglories_blue_growth_0.tscn" id="9_p0x3o"]
+[ext_resource type="PackedScene" uid="uid://brsp00x2qmfyi" path="res://objects/plants/morningglories_purple/morningglories_purple_growth_0.tscn" id="10_m1qrs"]
+[ext_resource type="PackedScene" uid="uid://d22tp8n68lbu2" path="res://objects/plants/morningglories_yellow/morningglories_yellow_growth_0.tscn" id="11_wyicn"]
+[ext_resource type="PackedScene" uid="uid://1o5kxepk6gu6" path="res://objects/plants/nightshade/nightshade_growth_0.tscn" id="12_ksdiy"]
+[ext_resource type="PackedScene" uid="uid://nw7ynk1enxld" path="res://objects/plants/poppies_orange/poppies_orange_growth_0.tscn" id="13_qbk12"]
+[ext_resource type="PackedScene" uid="uid://brgdgthnr2vbd" path="res://objects/plants/poppies_purple/poppies_purple_growth_0.tscn" id="14_l0udy"]
+[ext_resource type="PackedScene" uid="uid://vka7uyk5xmux" path="res://objects/plants/poppies_red/poppies_red_growth_0.tscn" id="15_sriqv"]
+[ext_resource type="PackedScene" uid="uid://cxmcutk2p3ok3" path="res://objects/plants/poppies_white/poppies_white_growth_0.tscn" id="16_ngwww"]
+[ext_resource type="PackedScene" uid="uid://cecmu3uu2djpn" path="res://objects/plants/stwart/stwart_growth_0.tscn" id="17_r0wom"]
+[ext_resource type="PackedScene" uid="uid://bc6i4475h0rfw" path="res://objects/plants/stwart/stwart_growth_8b.tscn" id="18_xox3c"]
+[ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian/valerian_growth_0.tscn" id="19_xox3c"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 y_sort_enabled = true
@@ -52,3 +63,36 @@ position = Vector2(-28, 47)
 
 [node name="LavenderStage0" parent="." instance=ExtResource("8_xpen0")]
 position = Vector2(-96, 22)
+
+[node name="MorningGloriesBlueStage0" parent="." instance=ExtResource("9_p0x3o")]
+position = Vector2(-104, -16)
+
+[node name="MorningGloriesPurpleStage0" parent="." instance=ExtResource("10_m1qrs")]
+position = Vector2(-88, -8)
+
+[node name="MorningGloriesYellowStage0" parent="." instance=ExtResource("11_wyicn")]
+position = Vector2(-73, -2)
+
+[node name="NightshadeStage0" parent="." instance=ExtResource("12_ksdiy")]
+position = Vector2(-57, 73)
+
+[node name="PoppiesOrangeStage0" parent="." instance=ExtResource("13_qbk12")]
+position = Vector2(71, -37)
+
+[node name="PoppiesPurpleStage0" parent="." instance=ExtResource("14_l0udy")]
+position = Vector2(85, -31)
+
+[node name="PoppiesRedStage0" parent="." instance=ExtResource("15_sriqv")]
+position = Vector2(100, -25)
+
+[node name="PoppiesWhiteStage0" parent="." instance=ExtResource("16_ngwww")]
+position = Vector2(114, -17)
+
+[node name="StwartStage0" parent="." instance=ExtResource("17_r0wom")]
+position = Vector2(-35, 69)
+
+[node name="StwartStage8b" parent="." instance=ExtResource("18_xox3c")]
+position = Vector2(2, 85)
+
+[node name="ValerianStage0" parent="." instance=ExtResource("19_xox3c")]
+position = Vector2(72, 41)

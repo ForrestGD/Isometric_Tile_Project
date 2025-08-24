@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxbj1y21nbiin"]
+
+[ext_resource type="Texture2D" uid="uid://cypbfgqb0fra6" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_purple_atlas.tres" id="1_b7blg"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_srmsx"]
+
+[node name="MorningGloriesPurpleStage6" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b7blg")
+offset = Vector2(0, -24)
+region_enabled = true
+region_rect = Rect2(192, 0, 32, 48)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="ObjectArea" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObjectArea"]
+visible = false
+polygon = PackedVector2Array(7, -4, 10, -7, -7, -11, -10, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_srmsx")
+next_scene = "uid://dj8ylhwfeya3t"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://8dea4vpwkixs"]
+
+[ext_resource type="Texture2D" uid="uid://b5uhhcvnammdu" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_blue_atlas.tres" id="1_dr06l"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_ms5mv"]
+
+[node name="MorningGloriesBlueStage3" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dr06l")
+offset = Vector2(0, -24)
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 48)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="ObjectArea" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ObjectArea"]
+visible = false
+polygon = PackedVector2Array(7, -4, 10, -7, -7, -11, -10, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_ms5mv")
+next_scene = "uid://bp75udrnqfngg"

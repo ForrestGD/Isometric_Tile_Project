@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjqefqkdufj85"]
+
+[ext_resource type="Texture2D" uid="uid://df5jm3cbbmnil" path="res://assets/sprites/plant_sprites/stwart_sprite/stwart_atlas.tres" id="1_t4ef1"]
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_kc45r"]
+
+[node name="StwartStage5" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t4ef1")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("2_kc45r")
+next_scene = "uid://dgetjaslalufl"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch2kwdymp0gt"]
+
+[ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="1_2fjb5"]
+[ext_resource type="Texture2D" uid="uid://b26hn8sowvwb4" path="res://assets/sprites/plant_sprites/nightshade_sprite/nightshade_atlas.tres" id="2_3rg4y"]
+
+[node name="NightshadeStage2" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_2fjb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3rg4y")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
+
+[node name="AgingComponent" type="Node" parent="."]
+script = ExtResource("1_2fjb5")
+next_scene = "uid://dv6ibgtbokse5"
+metadata/_custom_type_script = "uid://bdv11jgtadcci"

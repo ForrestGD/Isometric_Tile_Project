@@ -13,7 +13,7 @@ offset = Vector2(0, -16)
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
 

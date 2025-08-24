@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bwlwij1lrpj2k"]
+
+[ext_resource type="Texture2D" uid="uid://dmhi2hcb1wy56" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_white_spritesheet.png" id="1_b14o3"]
+
+[resource]
+atlas = ExtResource("1_b14o3")

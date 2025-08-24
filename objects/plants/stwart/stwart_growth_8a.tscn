@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://djeo7kw5umayv"]
+
+[ext_resource type="Texture2D" uid="uid://df5jm3cbbmnil" path="res://assets/sprites/plant_sprites/stwart_sprite/stwart_atlas.tres" id="1_bdisx"]
+
+[node name="StwartStage8a" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bdisx")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(256, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)

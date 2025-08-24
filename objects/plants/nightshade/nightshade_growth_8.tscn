@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc0dm1dhgttxf"]
+
+[ext_resource type="Texture2D" uid="uid://mkn04jcyb0on" path="res://assets/sprites/plant_sprites/nightshade_sprite/nightshade_spritesheet.png" id="1_nkckm"]
+
+[node name="NightshadeStage8" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nkckm")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(256, 0, 32, 32)
+
+[node name="TileArea" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -16, 16, -8, 0, 0, -16, -8)
