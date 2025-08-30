@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://n0ukrs8khmub" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_red_atlas.tres" id="2_uj1nj"]
 
 [node name="PoppiesRedStage2" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
-script = ExtResource("1_0mm4x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_uj1nj")

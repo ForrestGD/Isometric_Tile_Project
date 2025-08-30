@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ce76cpu05lq3u" path="res://assets/sprites/plant_sprites/lavender_sprite/lavender_atlas.tres" id="1_2hryv"]
 
 [node name="LavenderStage6" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
 

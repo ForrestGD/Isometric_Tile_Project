@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://64edhrcxb7ba" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_yellow_atlas.tres" id="1_fu100"]
 
 [node name="MorningGloriesYellowStage7" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
 

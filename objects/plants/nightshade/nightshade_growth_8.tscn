@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://mkn04jcyb0on" path="res://assets/sprites/plant_sprites/nightshade_sprite/nightshade_spritesheet.png" id="1_nkckm"]
 
 [node name="NightshadeStage8" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
 

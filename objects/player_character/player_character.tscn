@@ -13,12 +13,12 @@ script = ExtResource("1_s2a75")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture = ExtResource("1_ecp5v")
-offset = Vector2(2, -26)
+offset = Vector2(1, -30)
 
 [node name="CollisionBox" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2(0, -4)
-polygon = PackedVector2Array(0, -6, -6, -3, -6, 0, 0, 3, 6, 0, 6, -3)
+polygon = PackedVector2Array(0, -12, -8, -8, -8, -4, 0, 0, 8, -4, 8, -8)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(1, -20)
 zoom = Vector2(2, 2)

@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://bdv11jgtadcci" path="res://objects/components/aging_component.gd" id="2_ob7vh"]
 
 [node name="NightshadeStage6" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jnenl")
 offset = Vector2(0, -16)

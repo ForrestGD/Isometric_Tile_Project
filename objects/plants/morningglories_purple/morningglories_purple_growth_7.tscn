@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cypbfgqb0fra6" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_purple_atlas.tres" id="1_dxpmu"]
 
 [node name="MorningGloriesPurpleStage7" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 128
 collision_mask = 0
 

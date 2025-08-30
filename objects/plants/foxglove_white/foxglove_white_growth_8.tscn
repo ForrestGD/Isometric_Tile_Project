@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://iju4p2n2y3si" path="res://assets/sprites/plant_sprites/foxglove_sprites/foxglove_white_atlas.tres" id="1_rr3yj"]
 
 [node name="FoxgloveWhiteStage8" type="Area2D"]
+y_sort_enabled = true
+collision_layer = 128
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rr3yj")
