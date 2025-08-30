@@ -1,5 +1,4 @@
-extends Button
-
+extends AgingComponent
 @export var aging_increment = 1.0
 
 func _ready():

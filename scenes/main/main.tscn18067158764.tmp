@@ -1,23 +1,9 @@
-[gd_scene load_steps=19 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=5 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
 [ext_resource type="PackedScene" uid="uid://s1xrawfhwmig" path="res://objects/player_character/player_character.tscn" id="2_8euo1"]
 [ext_resource type="PackedScene" uid="uid://bo31c2mkc0ebi" path="res://ui/grow_button.tscn" id="3_imi8s"]
-[ext_resource type="PackedScene" uid="uid://d05kolhlt7x1d" path="res://objects/plants/foxglove_pink.tscn" id="5_6q06x"]
-[ext_resource type="PackedScene" uid="uid://dohinlw5t2cib" path="res://objects/plants/foxglove_purple.tscn" id="6_ow5a4"]
-[ext_resource type="PackedScene" uid="uid://bhj7grr81t8i5" path="res://objects/plants/foxglove_white.tscn" id="7_hujxm"]
-[ext_resource type="PackedScene" uid="uid://clsqii1bg7rgi" path="res://objects/plants/lavender.tscn" id="7_yyfjg"]
-[ext_resource type="PackedScene" uid="uid://dysse261kd7f1" path="res://objects/plants/morningglories_blue.tscn" id="9_ouso4"]
-[ext_resource type="PackedScene" uid="uid://brsp00x2qmfyi" path="res://objects/plants/morningglories_purple.tscn" id="10_blune"]
-[ext_resource type="PackedScene" uid="uid://d22tp8n68lbu2" path="res://objects/plants/morningglories_yellow.tscn" id="11_th5th"]
-[ext_resource type="PackedScene" uid="uid://1o5kxepk6gu6" path="res://objects/plants/nightshade.tscn" id="12_blune"]
-[ext_resource type="PackedScene" uid="uid://nw7ynk1enxld" path="res://objects/plants/poppies_orange.tscn" id="13_ou6is"]
-[ext_resource type="PackedScene" uid="uid://brgdgthnr2vbd" path="res://objects/plants/poppies_purple.tscn" id="14_necax"]
-[ext_resource type="PackedScene" uid="uid://vka7uyk5xmux" path="res://objects/plants/poppies_red.tscn" id="15_r4lks"]
-[ext_resource type="PackedScene" uid="uid://cxmcutk2p3ok3" path="res://objects/plants/poppies_white.tscn" id="16_pg34l"]
-[ext_resource type="PackedScene" uid="uid://cecmu3uu2djpn" path="res://objects/plants/stwart.tscn" id="17_m4h2d"]
-[ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian.tscn" id="18_p8abn"]
-[ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile.tscn" id="20_r4lks"]
+[ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile/alt_chamomile_growth_0.tscn" id="20_r4lks"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 y_sort_enabled = true
@@ -50,47 +36,5 @@ slide_on_ceiling = false
 
 [node name="GrowButton" parent="UIScreen" instance=ExtResource("3_imi8s")]
 
-[node name="FoxglovePink" parent="." instance=ExtResource("5_6q06x")]
-position = Vector2(-118, 9)
-
-[node name="FoxglovePurple" parent="." instance=ExtResource("6_ow5a4")]
-position = Vector2(-103, 1)
-
-[node name="FoxgloveWhite" parent="." instance=ExtResource("7_hujxm")]
-position = Vector2(-106, -15)
-
-[node name="Lavender" parent="." instance=ExtResource("7_yyfjg")]
-position = Vector2(-16, 36)
-
-[node name="Chamomile" parent="." instance=ExtResource("20_r4lks")]
-position = Vector2(-109, 33)
-
-[node name="MorningGloriesBlue" parent="." instance=ExtResource("9_ouso4")]
-position = Vector2(51, -14)
-
-[node name="MorningGloriesPurple" parent="." instance=ExtResource("10_blune")]
-position = Vector2(67, -9)
-
-[node name="MorningGloriesYellow" parent="." instance=ExtResource("11_th5th")]
-position = Vector2(80, -2)
-
-[node name="Nightshade" parent="." instance=ExtResource("12_blune")]
-position = Vector2(-142, 47)
-
-[node name="PoppiesOrange" parent="." instance=ExtResource("13_ou6is")]
-position = Vector2(-94, -37)
-
-[node name="PoppiesPurple" parent="." instance=ExtResource("14_necax")]
-position = Vector2(-83, -31)
-
-[node name="PoppiesRed" parent="." instance=ExtResource("15_r4lks")]
-position = Vector2(-73, -26)
-
-[node name="PoppiesWhite" parent="." instance=ExtResource("16_pg34l")]
-position = Vector2(-84, -46)
-
-[node name="StWart" parent="." instance=ExtResource("17_m4h2d")]
-position = Vector2(-1, 42)
-
-[node name="Valerian" parent="." instance=ExtResource("18_p8abn")]
-position = Vector2(-70, -5)
+[node name="ChamomileStage0" parent="." instance=ExtResource("20_r4lks")]
+position = Vector2(-91, 15)
