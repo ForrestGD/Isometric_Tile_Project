@@ -51,46 +51,46 @@ slide_on_ceiling = false
 [node name="GrowButton" parent="UIScreen" instance=ExtResource("3_imi8s")]
 
 [node name="FoxglovePink" parent="." instance=ExtResource("5_6q06x")]
-position = Vector2(-118, 9)
+position = Vector2(-117, 10)
 
 [node name="FoxglovePurple" parent="." instance=ExtResource("6_ow5a4")]
-position = Vector2(-103, 1)
+position = Vector2(-102, 2)
 
 [node name="FoxgloveWhite" parent="." instance=ExtResource("7_hujxm")]
-position = Vector2(-106, -15)
+position = Vector2(-105, -14)
 
 [node name="Lavender" parent="." instance=ExtResource("7_yyfjg")]
-position = Vector2(-16, 36)
+position = Vector2(-15, 37)
 
 [node name="Chamomile" parent="." instance=ExtResource("20_r4lks")]
-position = Vector2(-109, 33)
+position = Vector2(-108, 34)
 
 [node name="MorningGloriesBlue" parent="." instance=ExtResource("9_ouso4")]
-position = Vector2(51, -14)
+position = Vector2(52, -13)
 
 [node name="MorningGloriesPurple" parent="." instance=ExtResource("10_blune")]
-position = Vector2(67, -9)
+position = Vector2(68, -8)
 
 [node name="MorningGloriesYellow" parent="." instance=ExtResource("11_th5th")]
-position = Vector2(80, -2)
+position = Vector2(81, -1)
 
 [node name="Nightshade" parent="." instance=ExtResource("12_blune")]
-position = Vector2(-142, 47)
+position = Vector2(-141, 48)
 
 [node name="PoppiesOrange" parent="." instance=ExtResource("13_ou6is")]
-position = Vector2(-94, -37)
+position = Vector2(-93, -36)
 
 [node name="PoppiesPurple" parent="." instance=ExtResource("14_necax")]
-position = Vector2(-83, -31)
+position = Vector2(-82, -30)
 
 [node name="PoppiesRed" parent="." instance=ExtResource("15_r4lks")]
-position = Vector2(-73, -26)
+position = Vector2(-72, -25)
 
 [node name="PoppiesWhite" parent="." instance=ExtResource("16_pg34l")]
-position = Vector2(-84, -46)
+position = Vector2(-83, -45)
 
 [node name="StWart" parent="." instance=ExtResource("17_m4h2d")]
-position = Vector2(-1, 42)
+position = Vector2(0, 43)
 
 [node name="Valerian" parent="." instance=ExtResource("18_p8abn")]
-position = Vector2(-70, -5)
+position = Vector2(-69, -4)

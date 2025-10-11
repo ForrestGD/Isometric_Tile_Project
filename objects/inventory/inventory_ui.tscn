@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://br77s7rl153ro"]
+
+[ext_resource type="Script" uid="uid://ccpa5tbca2ed1" path="res://objects/inventory/inventory_ui.gd" id="1_xg3sh"]
+
+[node name="Inventory_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xg3sh")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
