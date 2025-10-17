@@ -1,15 +1,74 @@
-[gd_scene load_steps=2 format=3 uid="uid://br77s7rl153ro"]
+[gd_scene load_steps=4 format=3 uid="uid://br77s7rl153ro"]
 
 [ext_resource type="Script" uid="uid://ccpa5tbca2ed1" path="res://objects/inventory/inventory_ui.gd" id="1_xg3sh"]
+[ext_resource type="Texture2D" uid="uid://c2prv4fiajm7p" path="res://assets/sprites/ui_sprites/inventory_sprite_atlas.tres" id="2_8dg4v"]
+[ext_resource type="PackedScene" uid="uid://sn0ko1h62rki" path="res://objects/inventory/inventory_ui_slot.tscn" id="3_q4gis"]
 
 [node name="Inventory_UI" type="Control"]
+custom_minimum_size = Vector2(90, 70)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 90.0
+offset_bottom = 70.0
 script = ExtResource("1_xg3sh")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 90.0
+offset_bottom = 70.0
+texture = ExtResource("2_8dg4v")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -28.0
+offset_right = 38.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="InventoryUiSlot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot10" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot11" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
+
+[node name="InventoryUiSlot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_q4gis")]
+layout_mode = 2
