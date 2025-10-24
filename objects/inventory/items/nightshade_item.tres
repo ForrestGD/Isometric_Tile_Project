@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dnbgaivuu52g0"]
+
+[ext_resource type="Script" uid="uid://c6uyycoc85vi8" path="res://objects/inventory/inventory_item.gd" id="1_rpu8j"]
+[ext_resource type="Texture2D" uid="uid://dftb224u04b8s" path="res://assets/sprites/item_sprites/item_texture_resources/nightshade_texture.tres" id="2_ytcfn"]
+
+[resource]
+script = ExtResource("1_rpu8j")
+name = "nightshade"
+texture = ExtResource("2_ytcfn")
+metadata/_custom_type_script = "uid://c6uyycoc85vi8"

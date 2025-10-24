@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1yxx2t6x52wy" path="res://assets/sprites/witch_base_sprite.png" id="1_ecp5v"]
 [ext_resource type="Script" uid="uid://ysos31tqjf72" path="res://objects/player_character/player_character.gd" id="1_s2a75"]
-[ext_resource type="Resource" uid="uid://bbvpj4ar10yck" path="res://objects/inventory/player_inventory.tres" id="2_x100a"]
+[ext_resource type="Resource" uid="uid://bbvpj4ar10yck" path="res://objects/player_character/player_inventory.tres" id="2_x100a"]
 [ext_resource type="PackedScene" uid="uid://br77s7rl153ro" path="res://objects/inventory/inventory_ui.tscn" id="4_tcjii"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://o38uauh3fxet"]
+
+[ext_resource type="Script" uid="uid://c6uyycoc85vi8" path="res://objects/inventory/inventory_item.gd" id="1_v1lvg"]
+[ext_resource type="Texture2D" uid="uid://c4utqv74x0vuy" path="res://assets/sprites/item_sprites/item_texture_resources/morning_glory_yellow_texture.tres" id="2_4ovxy"]
+
+[resource]
+script = ExtResource("1_v1lvg")
+name = "morning_glory_yellow"
+texture = ExtResource("2_4ovxy")
+metadata/_custom_type_script = "uid://c6uyycoc85vi8"

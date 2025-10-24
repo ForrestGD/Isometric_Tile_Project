@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr85kkd4od5pt"
-path="res://.godot/imported/rose_item_spritesheet.png-994922538b0ef35afa25474190cebb5a.ctex"
+uid="uid://iouox6oamoca"
+path="res://.godot/imported/item_spritesheet.png-ca3cd2c201fc9ab16310af4689648e69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/item_sprites/rose_item_spritesheet.png"
-dest_files=["res://.godot/imported/rose_item_spritesheet.png-994922538b0ef35afa25474190cebb5a.ctex"]
+source_file="res://assets/sprites/item_sprites/item_spritesheet.png"
+dest_files=["res://.godot/imported/item_spritesheet.png-ca3cd2c201fc9ab16310af4689648e69.ctex"]
 
 [params]
 

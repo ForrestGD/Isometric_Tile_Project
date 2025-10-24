@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bcv2toyr3rtka"]
+
+[ext_resource type="Script" uid="uid://c6uyycoc85vi8" path="res://objects/inventory/inventory_item.gd" id="1_xgmfa"]
+[ext_resource type="Texture2D" uid="uid://cvvi2hee34yor" path="res://assets/sprites/item_sprites/item_texture_resources/foxglove_texture.tres" id="2_xgmfa"]
+
+[resource]
+script = ExtResource("1_xgmfa")
+name = "foxglove"
+texture = ExtResource("2_xgmfa")
+metadata/_custom_type_script = "uid://c6uyycoc85vi8"

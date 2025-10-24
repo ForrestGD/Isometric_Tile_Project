@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://de2ywpo7ki7iu"]
+
+[ext_resource type="Script" uid="uid://c6uyycoc85vi8" path="res://objects/inventory/inventory_item.gd" id="1_uwbl0"]
+[ext_resource type="Texture2D" uid="uid://da0tj4ucvu3nj" path="res://assets/sprites/item_sprites/item_texture_resources/chamomile_texture.tres" id="2_su6bj"]
+
+[resource]
+script = ExtResource("1_uwbl0")
+name = "chamomile"
+texture = ExtResource("2_su6bj")
+metadata/_custom_type_script = "uid://c6uyycoc85vi8"
