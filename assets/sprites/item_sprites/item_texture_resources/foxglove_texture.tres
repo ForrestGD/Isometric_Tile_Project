@@ -1,7 +1,11 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cvvi2hee34yor"]
+[gd_resource type="AtlasTexture" load_steps=3 format=3 uid="uid://cvvi2hee34yor"]
 
-[ext_resource type="Texture2D" uid="uid://b3rmh45w7sha7" path="res://assets/sprites/item_sprites/item_atlas.tres" id="1_rwwr8"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_raqs4"]
+load_path = "res://.godot/imported/item_spritesheet.png-ca3cd2c201fc9ab16310af4689648e69.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qp6g"]
+atlas = SubResource("CompressedTexture2D_raqs4")
 
 [resource]
-atlas = ExtResource("1_rwwr8")
+atlas = SubResource("AtlasTexture_1qp6g")
 region = Rect2(12, 0, 12, 12)

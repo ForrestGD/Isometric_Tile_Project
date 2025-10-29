@@ -1,7 +1,10 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://da0tj4ucvu3nj"]
+[gd_resource type="AtlasTexture" load_steps=3 format=3 uid="uid://da0tj4ucvu3nj"]
 
-[ext_resource type="Texture2D" uid="uid://b3rmh45w7sha7" path="res://assets/sprites/item_sprites/item_atlas.tres" id="1_ysurc"]
+[ext_resource type="Texture2D" uid="uid://iouox6oamoca" path="res://assets/sprites/item_sprites/item_spritesheet.png" id="1_m7qyl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc3nm"]
+atlas = ExtResource("1_m7qyl")
 
 [resource]
-atlas = ExtResource("1_ysurc")
+atlas = SubResource("AtlasTexture_dc3nm")
 region = Rect2(0, 0, 12, 12)

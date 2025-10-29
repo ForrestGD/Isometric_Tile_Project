@@ -1,9 +1,13 @@
-[gd_scene load_steps=19 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=23 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
+[ext_resource type="Script" uid="uid://ckv4eteqdrj8" path="res://scenes/main/main.gd" id="1_pg34l"]
 [ext_resource type="PackedScene" uid="uid://s1xrawfhwmig" path="res://objects/player_character/player_character.tscn" id="2_8euo1"]
 [ext_resource type="PackedScene" uid="uid://bo31c2mkc0ebi" path="res://ui/grow_button.tscn" id="3_imi8s"]
+[ext_resource type="Script" uid="uid://dummsk5kbqecr" path="res://objects/inventory/inventory_interface.gd" id="4_m4h2d"]
+[ext_resource type="PackedScene" uid="uid://p1n2828ma5lp" path="res://objects/inventory/inventory.tscn" id="4_necax"]
 [ext_resource type="PackedScene" uid="uid://d05kolhlt7x1d" path="res://objects/plants/foxglove/foxglove_pink.tscn" id="5_6q06x"]
+[ext_resource type="PackedScene" uid="uid://cose271o3tswq" path="res://objects/inventory/socket.tscn" id="6_m4h2d"]
 [ext_resource type="PackedScene" uid="uid://dohinlw5t2cib" path="res://objects/plants/foxglove/foxglove_purple.tscn" id="6_ow5a4"]
 [ext_resource type="PackedScene" uid="uid://bhj7grr81t8i5" path="res://objects/plants/foxglove/foxglove_white.tscn" id="7_hujxm"]
 [ext_resource type="PackedScene" uid="uid://clsqii1bg7rgi" path="res://objects/plants/lavender.tscn" id="7_yyfjg"]
@@ -19,8 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian.tscn" id="18_p8abn"]
 [ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile.tscn" id="20_r4lks"]
 
-[node name="TestSceneTilemap" type="Node2D"]
+[node name="Main" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_pg34l")
 
 [node name="Map" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -46,9 +51,32 @@ tile_set = ExtResource("1_3i6ib")
 position = Vector2(-50, 26)
 slide_on_ceiling = false
 
-[node name="UIScreen" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="GrowButton" parent="UIScreen" instance=ExtResource("3_imi8s")]
+[node name="InventoryInterface" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_m4h2d")
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("4_necax")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="SelectedSocket" parent="UI/InventoryInterface" instance=ExtResource("6_m4h2d")]
+visible = false
+modulate = Color(1, 1, 1, 0.501961)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+
+[node name="GrowButton" parent="UI" instance=ExtResource("3_imi8s")]
 
 [node name="FoxglovePink" parent="." instance=ExtResource("5_6q06x")]
 position = Vector2(-117, 10)

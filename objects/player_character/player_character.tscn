@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://s1xrawfhwmig"]
+[gd_scene load_steps=4 format=3 uid="uid://s1xrawfhwmig"]
 
 [ext_resource type="Texture2D" uid="uid://b1yxx2t6x52wy" path="res://assets/sprites/witch_base_sprite.png" id="1_ecp5v"]
 [ext_resource type="Script" uid="uid://ysos31tqjf72" path="res://objects/player_character/player_character.gd" id="1_s2a75"]
-[ext_resource type="Resource" uid="uid://bbvpj4ar10yck" path="res://objects/player_character/player_inventory.tres" id="2_x100a"]
-[ext_resource type="PackedScene" uid="uid://br77s7rl153ro" path="res://objects/inventory/inventory_ui.tscn" id="4_tcjii"]
+[ext_resource type="Resource" uid="uid://c7nhaa24x0h05" path="res://objects/inventory/test_inv.tres" id="2_x100a"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -26,17 +25,3 @@ polygon = PackedVector2Array(0, -12, -8, -8, -8, -4, 0, 0, 8, -4, 8, -8)
 offset = Vector2(1, -30)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
-
-[node name="Inventory_UI" parent="." instance=ExtResource("4_tcjii")]
-z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 16.0
-offset_top = -60.0
-offset_right = 106.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
