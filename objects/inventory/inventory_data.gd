@@ -9,7 +9,7 @@ signal inventory_updated(inventory_data: InventoryData)
 func on_socket_clicked(index: int, button: int) -> void:
 	inventory_interact.emit(self, index, button)
 
-func select_socket_data(index: int) -> SocketData:
+func grab_socket_data(index: int) -> SocketData:
 	var ret_data: SocketData = socket_data[index]
 	if ret_data:
 		socket_data[index] = null
@@ -18,13 +18,23 @@ func select_socket_data(index: int) -> SocketData:
 	else:
 		return null
 
-func deselect_socket_data(data: SocketData, index: int) -> SocketData:
-	var temp_data: SocketData = socket_data[index]
+func drop_socket_data(data: SocketData, index: int) -> SocketData:
+	var data_at_index: SocketData = socket_data[index]
 	var ret_data: SocketData
-	if temp_data and temp_data.can_merge_with_other(data):
-		temp_data.merge_with_other(data)
+	if data_at_index and data_at_index.can_merge_with_other(data):
+		data_at_index.merge_with_other(data)
 	else:
 		socket_data[index] = data
-		ret_data = temp_data
+		ret_data = data_at_index
 	inventory_updated.emit(self)
 	return ret_data
+
+func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
+	var data_at_index: SocketData = socket_data[index]
+	if not data_at_index:
+		socket_data[index] = data.create_single_socket_data()
+	inventory_updated.emit(self)
+	if data.quantity > 0:
+		return data
+	else:
+		return null
