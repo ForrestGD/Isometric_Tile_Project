@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=24 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
 [ext_resource type="Script" uid="uid://ckv4eteqdrj8" path="res://scenes/main/main.gd" id="1_pg34l"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cecmu3uu2djpn" path="res://objects/plants/stwart.tscn" id="17_m4h2d"]
 [ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian.tscn" id="18_p8abn"]
 [ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile.tscn" id="20_r4lks"]
+[ext_resource type="PackedScene" uid="uid://dfdg4blv1eos2" path="res://objects/interactables/chest.tscn" id="23_p8abn"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -122,3 +123,6 @@ position = Vector2(0, 43)
 
 [node name="Valerian" parent="." instance=ExtResource("18_p8abn")]
 position = Vector2(-69, -4)
+
+[node name="Chest" parent="." instance=ExtResource("23_p8abn")]
+position = Vector2(63, 42)

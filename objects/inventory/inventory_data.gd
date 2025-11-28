@@ -33,6 +33,8 @@ func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
 	var data_at_index: SocketData = socket_data[index]
 	if not data_at_index:
 		socket_data[index] = data.create_single_socket_data()
+	elif data_at_index.can_add_single_other(data):
+		data_at_index.merge_with_other(data.create_single_socket_data())
 	inventory_updated.emit(self)
 	if data.quantity > 0:
 		return data

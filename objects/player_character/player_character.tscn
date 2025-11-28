@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://s1xrawfhwmig"]
+[gd_scene load_steps=6 format=3 uid="uid://s1xrawfhwmig"]
 
 [ext_resource type="Texture2D" uid="uid://b1yxx2t6x52wy" path="res://assets/sprites/witch_base_sprite.png" id="1_ecp5v"]
 [ext_resource type="Script" uid="uid://ysos31tqjf72" path="res://objects/player_character/player_character.gd" id="1_s2a75"]
 [ext_resource type="Resource" uid="uid://c7nhaa24x0h05" path="res://objects/inventory/test_inv.tres" id="2_x100a"]
+[ext_resource type="Script" uid="uid://cspwq1vduic0l" path="res://objects/components/interactor_component.gd" id="4_tcjii"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elw8p"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -25,3 +28,11 @@ polygon = PackedVector2Array(0, -12, -8, -8, -8, -4, 0, 0, 8, -4, 8, -8)
 offset = Vector2(1, -30)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="Interactor" type="Area2D" parent="."]
+script = ExtResource("4_tcjii")
+metadata/_custom_type_script = "uid://cspwq1vduic0l"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactor"]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_elw8p")
