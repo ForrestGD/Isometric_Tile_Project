@@ -5,7 +5,8 @@
 [ext_resource type="Resource" uid="uid://c7nhaa24x0h05" path="res://objects/inventory/test_inv.tres" id="2_x100a"]
 [ext_resource type="Script" uid="uid://cspwq1vduic0l" path="res://objects/components/interactor_component.gd" id="4_tcjii"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_elw8p"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcjii"]
+radius = 16.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -27,12 +28,27 @@ polygon = PackedVector2Array(0, -12, -8, -8, -8, -4, 0, 0, 8, -4, 8, -8)
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(1, -30)
 zoom = Vector2(2, 2)
-position_smoothing_enabled = true
 
 [node name="Interactor" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
 script = ExtResource("4_tcjii")
 metadata/_custom_type_script = "uid://cspwq1vduic0l"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactor"]
-position = Vector2(0, -10)
-shape = SubResource("CircleShape2D_elw8p")
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_tcjii")
+
+[node name="BoxContainer" type="BoxContainer" parent="Interactor"]
+visible = false
+z_index = 1
+offset_left = -74.0
+offset_top = -64.0
+offset_right = 74.0
+offset_bottom = -40.0
+pivot_offset = Vector2(74, 12)
+
+[node name="InteractLabel" type="Label" parent="Interactor/BoxContainer"]
+layout_mode = 2
+text = "Press 'E' to Interact"
+horizontal_alignment = 1

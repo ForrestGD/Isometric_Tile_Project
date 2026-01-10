@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cecmu3uu2djpn" path="res://objects/plants/stwart.tscn" id="17_m4h2d"]
 [ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian.tscn" id="18_p8abn"]
 [ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile.tscn" id="20_r4lks"]
-[ext_resource type="PackedScene" uid="uid://dfdg4blv1eos2" path="res://objects/interactables/chest.tscn" id="23_p8abn"]
+[ext_resource type="PackedScene" uid="uid://dfdg4blv1eos2" path="res://objects/interaction/chest.tscn" id="23_p8abn"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -126,3 +126,6 @@ position = Vector2(-69, -4)
 
 [node name="Chest" parent="." instance=ExtResource("23_p8abn")]
 position = Vector2(63, 42)
+
+[node name="Chest2" parent="." instance=ExtResource("23_p8abn")]
+position = Vector2(33, 55)
