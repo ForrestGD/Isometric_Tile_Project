@@ -8,6 +8,9 @@ func set_inventory_data(data: InventoryData) -> void:
 	data.inventory_updated.connect(populate_item_grid)
 	populate_item_grid(data)
 
+func clear_inventory_data(data: InventoryData) -> void:
+	data.inventory_updated.disconnect(populate_item_grid)
+
 func populate_item_grid(data: InventoryData) -> void:
 	for child in item_grid.get_children():
 		child.queue_free()

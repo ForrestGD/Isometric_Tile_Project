@@ -17,5 +17,5 @@ func _on_mouse_entered() -> void:
 	hovered = true
 	
 func interact(interactor: Interactor) -> void:
-	interacted.emit(self, interactor)
-	print("interacted with {0}".format([self.name]))
+	interacted.emit(self.get_parent(), interactor)
+	print("interacted with {0}".format([self.get_parent().name]))

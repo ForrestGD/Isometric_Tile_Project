@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfdg4blv1eos2"]
+[gd_scene load_steps=7 format=3 uid="uid://dfdg4blv1eos2"]
 
 [ext_resource type="Texture2D" uid="uid://b6qqi6olhsap7" path="res://assets/sprites/temp_chest_sprite.png" id="1_704ms"]
+[ext_resource type="Script" uid="uid://ckiklfkr74is8" path="res://objects/interaction/chest.gd" id="1_tu4pn"]
+[ext_resource type="Script" uid="uid://bugq23rwkojvy" path="res://objects/inventory/inventory_data.gd" id="2_3purb"]
 [ext_resource type="Script" uid="uid://d1frgy7jqmo5g" path="res://objects/components/interactable_component.gd" id="2_38hgl"]
+[ext_resource type="Script" uid="uid://0j8otjirtsc5" path="res://objects/inventory/socket_data.gd" id="3_het83"]
 
-[node name="Chest" type="StaticBody2D"]
+[sub_resource type="Resource" id="Resource_krrjs"]
+resource_local_to_scene = true
+script = ExtResource("2_3purb")
+socket_data = Array[ExtResource("3_het83")]([])
+metadata/_custom_type_script = "uid://bugq23rwkojvy"
+
+[node name="Chest" type="StaticBody2D" groups=["external_inventory"]]
 y_sort_enabled = true
 collision_layer = 8
 collision_mask = 8
+script = ExtResource("1_tu4pn")
+inventory = SubResource("Resource_krrjs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_704ms")

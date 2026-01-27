@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=32 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
 [ext_resource type="Script" uid="uid://ckv4eteqdrj8" path="res://scenes/main/main.gd" id="1_pg34l"]
@@ -23,6 +23,34 @@
 [ext_resource type="PackedScene" uid="uid://wrbffdbi8him" path="res://objects/plants/valerian.tscn" id="18_p8abn"]
 [ext_resource type="PackedScene" uid="uid://dui4f1k7yuhkd" path="res://objects/plants/chamomile.tscn" id="20_r4lks"]
 [ext_resource type="PackedScene" uid="uid://dfdg4blv1eos2" path="res://objects/interaction/chest.tscn" id="23_p8abn"]
+[ext_resource type="Script" uid="uid://bugq23rwkojvy" path="res://objects/inventory/inventory_data.gd" id="24_0bhws"]
+[ext_resource type="Script" uid="uid://0j8otjirtsc5" path="res://objects/inventory/socket_data.gd" id="25_62atk"]
+[ext_resource type="Resource" uid="uid://cfprops2b2sjy" path="res://objects/item/items/chamomile.tres" id="26_i7in8"]
+[ext_resource type="Resource" uid="uid://cfcef1qvr3ay" path="res://objects/item/items/foxglove.tres" id="27_gkmcc"]
+
+[sub_resource type="Resource" id="Resource_7nlll"]
+script = ExtResource("25_62atk")
+item = ExtResource("26_i7in8")
+quantity = 5
+metadata/_custom_type_script = "uid://0j8otjirtsc5"
+
+[sub_resource type="Resource" id="Resource_ii537"]
+resource_local_to_scene = true
+script = ExtResource("24_0bhws")
+socket_data = Array[ExtResource("25_62atk")]([SubResource("Resource_7nlll"), null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://bugq23rwkojvy"
+
+[sub_resource type="Resource" id="Resource_rofvo"]
+script = ExtResource("25_62atk")
+item = ExtResource("27_gkmcc")
+quantity = 1
+metadata/_custom_type_script = "uid://0j8otjirtsc5"
+
+[sub_resource type="Resource" id="Resource_tbnf8"]
+resource_local_to_scene = true
+script = ExtResource("24_0bhws")
+socket_data = Array[ExtResource("25_62atk")]([null, null, null, SubResource("Resource_rofvo"), null, null, null, null])
+metadata/_custom_type_script = "uid://bugq23rwkojvy"
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -69,6 +97,14 @@ layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="ExternalInventory" parent="UI/InventoryInterface" instance=ExtResource("4_necax")]
+visible = false
+layout_mode = 0
+offset_left = 336.0
+offset_top = 8.0
+offset_right = 352.0
 offset_bottom = 24.0
 
 [node name="GrabbedSocket" parent="UI/InventoryInterface" instance=ExtResource("6_m4h2d")]
@@ -126,6 +162,8 @@ position = Vector2(-69, -4)
 
 [node name="Chest" parent="." instance=ExtResource("23_p8abn")]
 position = Vector2(63, 42)
+inventory = SubResource("Resource_ii537")
 
 [node name="Chest2" parent="." instance=ExtResource("23_p8abn")]
 position = Vector2(33, 55)
+inventory = SubResource("Resource_tbnf8")
