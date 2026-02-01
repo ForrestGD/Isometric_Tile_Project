@@ -40,3 +40,16 @@ func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
 		return data
 	else:
 		return null
+
+func pickup_socket_data(data: SocketData) -> bool:
+	for index in socket_data.size():
+		var data_at_index: SocketData = socket_data[index]
+		if not data_at_index:
+			socket_data[index] = data
+			inventory_updated.emit(self)
+			return true
+		elif data_at_index.can_merge_with_other(data):
+			data_at_index.merge_with_other(data)
+			inventory_updated.emit(self)
+			return true
+	return false

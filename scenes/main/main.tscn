@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=34 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
 [ext_resource type="Script" uid="uid://ckv4eteqdrj8" path="res://scenes/main/main.gd" id="1_pg34l"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" uid="uid://0j8otjirtsc5" path="res://objects/inventory/socket_data.gd" id="25_62atk"]
 [ext_resource type="Resource" uid="uid://cfprops2b2sjy" path="res://objects/item/items/chamomile.tres" id="26_i7in8"]
 [ext_resource type="Resource" uid="uid://cfcef1qvr3ay" path="res://objects/item/items/foxglove.tres" id="27_gkmcc"]
+[ext_resource type="PackedScene" uid="uid://dt66si011wedf" path="res://objects/item/pickup/pickup_template.tscn" id="28_62atk"]
 
 [sub_resource type="Resource" id="Resource_7nlll"]
 script = ExtResource("25_62atk")
@@ -51,6 +52,12 @@ resource_local_to_scene = true
 script = ExtResource("24_0bhws")
 socket_data = Array[ExtResource("25_62atk")]([null, null, null, SubResource("Resource_rofvo"), null, null, null, null])
 metadata/_custom_type_script = "uid://bugq23rwkojvy"
+
+[sub_resource type="Resource" id="Resource_i7in8"]
+script = ExtResource("25_62atk")
+item = ExtResource("26_i7in8")
+quantity = 1
+metadata/_custom_type_script = "uid://0j8otjirtsc5"
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -167,3 +174,7 @@ inventory = SubResource("Resource_ii537")
 [node name="Chest2" parent="." instance=ExtResource("23_p8abn")]
 position = Vector2(33, 55)
 inventory = SubResource("Resource_tbnf8")
+
+[node name="Pickup" parent="." instance=ExtResource("28_62atk")]
+position = Vector2(1, 22)
+socket_data = SubResource("Resource_i7in8")
