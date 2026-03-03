@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d05no7cxxycxv"]
+
+[ext_resource type="Texture2D" uid="uid://dkdxnstmy6g7v" path="res://assets/sprites/environment_sprites/trees_twisty_atlas.tres" id="1_4rek0"]
+
+[node name="TreeTwistyL2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -48)
+texture = ExtResource("1_4rek0")
+region_enabled = true
+region_rect = Rect2(304, 0, 112, 96)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://djfin268txnfj"]
+
+[ext_resource type="Texture2D" uid="uid://cl1hdqo6iba6g" path="res://assets/sprites/environment_sprites/tallgrass_atlas.tres" id="1_en1cu"]
+
+[node name="V1Grass3" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_en1cu")
+region_enabled = true
+region_rect = Rect2(0, 32, 48, 32)

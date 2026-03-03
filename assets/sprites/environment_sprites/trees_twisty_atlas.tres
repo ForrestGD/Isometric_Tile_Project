@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dkdxnstmy6g7v"]
+
+[ext_resource type="Texture2D" uid="uid://bxxls7dgf0jdq" path="res://assets/sprites/environment_sprites/twisty_trees_spritesheet.png" id="1_e45n7"]
+
+[resource]
+atlas = ExtResource("1_e45n7")

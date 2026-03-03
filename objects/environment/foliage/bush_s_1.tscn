@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7tnoyrqbpxvh"]
+
+[ext_resource type="Texture2D" uid="uid://bm74l27bf5lo4" path="res://assets/sprites/environment_sprites/bushes_atlas.tres" id="1_5c685"]
+
+[node name="BushS1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_5c685")
+region_enabled = true
+region_rect = Rect2(0, 48, 32, 32)

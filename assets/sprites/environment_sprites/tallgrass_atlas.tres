@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cl1hdqo6iba6g"]
+
+[ext_resource type="Texture2D" uid="uid://j1um4g0jfx5j" path="res://assets/sprites/environment_sprites/tallgrass_variants_spritesheet.png" id="1_23k3a"]
+
+[resource]
+atlas = ExtResource("1_23k3a")

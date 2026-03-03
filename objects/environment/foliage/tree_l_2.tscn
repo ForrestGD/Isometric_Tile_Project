@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b53esuq1diy0b"]
+
+[ext_resource type="Texture2D" uid="uid://cucj5nt6lljo4" path="res://assets/sprites/environment_sprites/trees_atlas.tres" id="1_sm0jv"]
+
+[node name="TreeL2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -56)
+texture = ExtResource("1_sm0jv")
+region_enabled = true
+region_rect = Rect2(256, 0, 128, 112)
