@@ -1,5 +1,5 @@
-class_name InventoryInterface
 extends Control
+class_name InventoryInterface
 
 var grabbed_socket_data: SocketData
 var external_inventory_owner: Node = null

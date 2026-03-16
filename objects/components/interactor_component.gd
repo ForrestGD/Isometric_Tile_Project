@@ -1,5 +1,5 @@
-class_name Interactor
 extends Area2D
+class_name Interactor
 
 var interactables_list: Array[Interactable] = []
 @onready var label_container: BoxContainer = $BoxContainer

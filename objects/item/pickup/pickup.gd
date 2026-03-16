@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Pickup
 
 @export var socket_data: SocketData
 @onready var sprite: Sprite2D = $Sprite2D

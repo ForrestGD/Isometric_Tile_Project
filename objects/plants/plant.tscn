@@ -1,0 +1,109 @@
+[gd_scene load_steps=22 format=3 uid="uid://c5vxn6rypsd8k"]
+
+[ext_resource type="Script" uid="uid://cmjfv0oo5bpae" path="res://objects/plants/plant.gd" id="1_mxit0"]
+[ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_dct2s"]
+[ext_resource type="Script" uid="uid://d1frgy7jqmo5g" path="res://objects/components/interactable_component.gd" id="2_tt3nj"]
+[ext_resource type="Texture2D" uid="uid://4rkkl4er36qd" path="res://assets/sprites/plant_sprites/chamomile_sprite/chamomile_atlas.tres" id="3_7m1ir"]
+[ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_816ke"]
+[ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="5_66i58"]
+[ext_resource type="Resource" uid="uid://cfprops2b2sjy" path="res://objects/item/items/chamomile.tres" id="6_47slv"]
+
+[sub_resource type="Resource" id="Resource_2i3qu"]
+script = ExtResource("5_66i58")
+stage_index = 1
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_fsr1c"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_2i3qu")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_h6mol"]
+script = ExtResource("5_66i58")
+stage_index = 2
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_4cew1"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_h6mol")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_ttjy0"]
+script = ExtResource("5_66i58")
+stage_index = 3
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_y50yw"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_ttjy0")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_1cg5g"]
+script = ExtResource("5_66i58")
+stage_index = 4
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_0sg0u"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_1cg5g")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_qlge7"]
+script = ExtResource("5_66i58")
+stage_index = 5
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_0lfo2"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_qlge7")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_2qjhc"]
+script = ExtResource("5_66i58")
+stage_index = 6
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_iwmy4"]
+script = ExtResource("3_816ke")
+interactable = false
+transitions = Array[ExtResource("5_66i58")]([SubResource("Resource_2qjhc")])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_4rjug"]
+script = ExtResource("3_816ke")
+interactable = true
+item = ExtResource("6_47slv")
+transitions = Array[ExtResource("5_66i58")]([])
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_nvsxd"]
+script = ExtResource("2_dct2s")
+sprite = ExtResource("3_7m1ir")
+sprite_size = Vector2i(32, 32)
+stage_data = Array[ExtResource("3_816ke")]([SubResource("Resource_fsr1c"), SubResource("Resource_4cew1"), SubResource("Resource_y50yw"), SubResource("Resource_0sg0u"), SubResource("Resource_0lfo2"), SubResource("Resource_iwmy4"), SubResource("Resource_4rjug")])
+metadata/_custom_type_script = "uid://c526tsy65chgj"
+
+[node name="Plant" type="Node"]
+script = ExtResource("1_mxit0")
+plant_data = SubResource("Resource_nvsxd")
+
+[node name="Interactable" type="Area2D" parent="."]
+script = ExtResource("2_tt3nj")
+metadata/_custom_type_script = "uid://d1frgy7jqmo5g"
+
+[node name="InteractableArea" type="CollisionPolygon2D" parent="Interactable"]
+polygon = PackedVector2Array(0, 0, -16, -8, 0, -16, 16, -8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+region_enabled = true

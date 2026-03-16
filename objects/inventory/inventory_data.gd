@@ -1,5 +1,5 @@
-class_name InventoryData
 extends Resource
+class_name InventoryData
 
 signal inventory_interact(inventory_data: InventoryData, index: int, button: int)
 signal inventory_updated(inventory_data: InventoryData)

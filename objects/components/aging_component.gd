@@ -1,10 +1,9 @@
-class_name AgingComponent
 extends Node
+class_name AgingComponent
 
 ##track age of object, and when age reaches threshold, can replaces scene with next scene
 signal age_changed(new_age : float, last_age : float)
 signal age_threshold_reached(maximum_age : int)
-
 
 var current_state = 0
 var sprite : Sprite2D

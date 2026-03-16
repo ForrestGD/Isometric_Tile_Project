@@ -1,5 +1,5 @@
-class_name SocketData
 extends Resource
+class_name SocketData
 
 const MAX_STACK_SIZE: int = 99
 
