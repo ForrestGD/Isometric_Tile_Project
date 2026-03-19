@@ -1,0 +1,122 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=23 format=3 uid="uid://dgq128wqd2ck1"]
+
+[ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_qnrdl"]
+[ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_8leef"]
+[ext_resource type="Texture2D" uid="uid://b26hn8sowvwb4" path="res://assets/sprites/plant_sprites/nightshade_sprite/nightshade_atlas.tres" id="3_8leef"]
+[ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_420n4"]
+
+[sub_resource type="Resource" id="Resource_420n4"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 0
+to_stage_index = 1
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_28wny"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 1
+to_stage_index = 2
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_8leef"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 2
+to_stage_index = 3
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_efmvp"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 3
+to_stage_index = 4
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_j1r1l"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 4
+to_stage_index = 5
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_kkh1x"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 5
+to_stage_index = 6
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_bw8pv"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 6
+to_stage_index = 7
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_fwh7n"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 7
+to_stage_index = 8
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_curak"]
+script = ExtResource("1_qnrdl")
+from_stage_index = 8
+to_stage_index = 5
+time = 4.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_lmakh"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_5150i"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_gsxpr"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_eqept"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_rxvh0"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_bwvde"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_wrwbx"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_g5us4"]
+script = ExtResource("3_420n4")
+interactable = false
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[sub_resource type="Resource" id="Resource_p7kd4"]
+script = ExtResource("3_420n4")
+interactable = true
+metadata/_custom_type_script = "uid://co7vjo2luh6oi"
+
+[resource]
+script = ExtResource("2_8leef")
+sprite = ExtResource("3_8leef")
+sprite_size = Vector2i(32, 32)
+stage_list = Array[ExtResource("3_420n4")]([SubResource("Resource_lmakh"), SubResource("Resource_5150i"), SubResource("Resource_gsxpr"), SubResource("Resource_eqept"), SubResource("Resource_rxvh0"), SubResource("Resource_bwvde"), SubResource("Resource_wrwbx"), SubResource("Resource_g5us4"), SubResource("Resource_p7kd4")])
+edge_list = Array[ExtResource("1_qnrdl")]([SubResource("Resource_420n4"), SubResource("Resource_28wny"), SubResource("Resource_8leef"), SubResource("Resource_efmvp"), SubResource("Resource_j1r1l"), SubResource("Resource_kkh1x"), SubResource("Resource_bw8pv"), SubResource("Resource_fwh7n"), SubResource("Resource_curak")])
+metadata/_custom_type_script = "uid://c526tsy65chgj"
