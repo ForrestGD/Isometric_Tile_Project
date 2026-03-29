@@ -10,7 +10,7 @@ region = Rect2(0, 0, 12, 12)
 [resource]
 script = ExtResource("1_7w8it")
 name = "Chamomile"
+maximum_quantity = 99
 icon = SubResource("AtlasTexture_fc5i0")
-stackable = true
 description = "Chamomile Flowers"
 metadata/_custom_type_script = "uid://co2o4mbdnsgju"

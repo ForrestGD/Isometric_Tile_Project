@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=21 format=3 uid="uid://dbbmgjd7rkpc7"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=22 format=3 uid="uid://dbbmgjd7rkpc7"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_rjaqw"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_3pyyd"]
-[ext_resource type="Texture2D" uid="uid://b5uhhcvnammdu" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_blue_atlas.tres" id="3_0ea6x"]
+[ext_resource type="Texture2D" uid="uid://cypbfgqb0fra6" path="res://assets/sprites/plant_sprites/morningglories_sprites/morningglories_purple_atlas.tres" id="3_mor7u"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="4_nfs1t"]
+[ext_resource type="Resource" uid="uid://c7ck6po27ng8h" path="res://objects/item/items/morning_glory_purple.tres" id="5_qprnd"]
 
 [sub_resource type="Resource" id="Resource_8gks1"]
 script = ExtResource("1_rjaqw")
@@ -99,11 +100,12 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_yhbtt"]
 script = ExtResource("4_nfs1t")
 interactable = true
+item = ExtResource("5_qprnd")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]
 script = ExtResource("2_3pyyd")
-sprite = ExtResource("3_0ea6x")
+sprite = ExtResource("3_mor7u")
 sprite_size = Vector2i(32, 48)
 stage_list = Array[ExtResource("4_nfs1t")]([SubResource("Resource_5ks48"), SubResource("Resource_043yv"), SubResource("Resource_g04km"), SubResource("Resource_jgu7j"), SubResource("Resource_84tv1"), SubResource("Resource_8cgq1"), SubResource("Resource_e10q7"), SubResource("Resource_yhbtt")])
 edge_list = Array[ExtResource("1_rjaqw")]([SubResource("Resource_8gks1"), SubResource("Resource_wogmp"), SubResource("Resource_5qv6f"), SubResource("Resource_50lrn"), SubResource("Resource_v7mc7"), SubResource("Resource_j13r8"), SubResource("Resource_25ksf"), SubResource("Resource_ri2wt")])

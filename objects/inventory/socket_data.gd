@@ -8,12 +8,12 @@ const MAX_STACK_SIZE: int = 99
 
 func can_add_single_other(other_socket_data: SocketData) -> bool:
     return item == other_socket_data.item \
-        and item.stackable \
+        and quantity < item.maximum_quantity \
         and quantity < MAX_STACK_SIZE 
 
 func can_merge_with_other(other_socket_data: SocketData) -> bool:
     return item == other_socket_data.item \
-        and item.stackable \
+        and quantity < item.maximum_quantity \
         and quantity + other_socket_data.quantity <= MAX_STACK_SIZE 
 
 func merge_with_other(other_socket_data: SocketData) -> void:
@@ -27,6 +27,6 @@ func create_single_socket_data() -> SocketData:
 
 func set_quantity(value: int) -> void:
     quantity = value
-    if value > 1 and not item.stackable:
+    if value > 1 and item.maximum_quantity == 1:
         quantity = 1
         push_error("%s is not stackable, quantity set to 1" % item.name)

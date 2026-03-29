@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=23 format=3 uid="uid://dgq128wqd2ck1"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=24 format=3 uid="uid://dgq128wqd2ck1"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_qnrdl"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_8leef"]
 [ext_resource type="Texture2D" uid="uid://b26hn8sowvwb4" path="res://assets/sprites/plant_sprites/nightshade_sprite/nightshade_atlas.tres" id="3_8leef"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_420n4"]
+[ext_resource type="Resource" uid="uid://x1j6s11uwemg" path="res://objects/item/items/nightshade.tres" id="5_dty62"]
 
 [sub_resource type="Resource" id="Resource_420n4"]
 script = ExtResource("1_qnrdl")
@@ -111,6 +112,7 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_p7kd4"]
 script = ExtResource("3_420n4")
 interactable = true
+item = ExtResource("5_dty62")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]

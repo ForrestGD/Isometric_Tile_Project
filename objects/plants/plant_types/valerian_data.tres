@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=22 format=3 uid="uid://bpio0jphonvsk"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=23 format=3 uid="uid://bpio0jphonvsk"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_c7gi7"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_jw7b2"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_j3dnw"]
 [ext_resource type="Texture2D" uid="uid://cesj3f4rw3jvp" path="res://assets/sprites/plant_sprites/valerian_sprite/valerian_atlas.tres" id="3_jw7b2"]
+[ext_resource type="Resource" uid="uid://c3ug425ek2jue" path="res://objects/item/items/valerian.tres" id="5_3xste"]
 
 [sub_resource type="Resource" id="Resource_oxxd7"]
 script = ExtResource("1_c7gi7")
@@ -104,6 +105,7 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_btcvn"]
 script = ExtResource("3_j3dnw")
 interactable = true
+item = ExtResource("5_3xste")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=16 format=3 uid="uid://bklu7qryeiyyn"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=18 format=3 uid="uid://bklu7qryeiyyn"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_pcly7"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_smjwd"]
 [ext_resource type="Texture2D" uid="uid://tu4vfu3q518s" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_purple_atlas.tres" id="3_pcly7"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="4_375ms"]
+[ext_resource type="Resource" uid="uid://dybdurfnknyoh" path="res://objects/item/items/poppies_purple.tres" id="5_rfuef"]
+[ext_resource type="Resource" uid="uid://cy43ewbchufl4" path="res://objects/item/items/poppy_head.tres" id="6_kfuyw"]
 
 [sub_resource type="Resource" id="Resource_xlnc7"]
 script = ExtResource("1_pcly7")
@@ -63,11 +65,13 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_yeb6d"]
 script = ExtResource("4_375ms")
 interactable = true
+item = ExtResource("5_rfuef")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [sub_resource type="Resource" id="Resource_jjokg"]
 script = ExtResource("4_375ms")
 interactable = true
+item = ExtResource("6_kfuyw")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bl514w5u02yn8"]
+[gd_scene load_steps=22 format=4 uid="uid://bl514w5u02yn8"]
 
 [ext_resource type="TileSet" uid="uid://besflauf4vx41" path="res://assets/tileset_assets/grass_full_tileset.tres" id="1_3i6ib"]
 [ext_resource type="Script" uid="uid://ckv4eteqdrj8" path="res://scenes/main/main.gd" id="1_pg34l"]
@@ -8,13 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://cose271o3tswq" path="res://objects/inventory/socket.tscn" id="6_m4h2d"]
 [ext_resource type="PackedScene" uid="uid://c5vxn6rypsd8k" path="res://objects/plants/plant.tscn" id="13_th5th"]
 [ext_resource type="Resource" uid="uid://dwikw5etwki4b" path="res://objects/plants/plant_types/lavender_data.tres" id="14_7smn1"]
+[ext_resource type="Resource" uid="uid://bamqdlrnlgxht" path="res://objects/plants/plant_types/chamomile_data.tres" id="14_hxu8e"]
 [ext_resource type="Resource" uid="uid://dgq128wqd2ck1" path="res://objects/plants/plant_types/nightshade_data.tres" id="15_raeie"]
 [ext_resource type="PackedScene" uid="uid://dfdg4blv1eos2" path="res://objects/interaction/chest.tscn" id="23_p8abn"]
 [ext_resource type="Script" uid="uid://bugq23rwkojvy" path="res://objects/inventory/inventory_data.gd" id="24_0bhws"]
 [ext_resource type="Script" uid="uid://0j8otjirtsc5" path="res://objects/inventory/socket_data.gd" id="25_62atk"]
 [ext_resource type="Resource" uid="uid://cfprops2b2sjy" path="res://objects/item/items/chamomile.tres" id="26_i7in8"]
 [ext_resource type="Resource" uid="uid://cfcef1qvr3ay" path="res://objects/item/items/foxglove.tres" id="27_gkmcc"]
-[ext_resource type="PackedScene" uid="uid://dt66si011wedf" path="res://objects/item/pickup/pickup_template.tscn" id="28_62atk"]
+[ext_resource type="PackedScene" uid="uid://dt66si011wedf" path="res://objects/item/pickup/pickup.tscn" id="28_62atk"]
 
 [sub_resource type="Resource" id="Resource_7nlll"]
 script = ExtResource("25_62atk")
@@ -120,7 +121,8 @@ position = Vector2(1, 22)
 socket_data = SubResource("Resource_i7in8")
 
 [node name="Plant" parent="." instance=ExtResource("13_th5th")]
-position = Vector2(-16, 34)
+position = Vector2(-15, 34)
+plant_data = ExtResource("14_hxu8e")
 
 [node name="Plant2" parent="." instance=ExtResource("13_th5th")]
 position = Vector2(-59, 57)

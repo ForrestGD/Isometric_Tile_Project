@@ -10,7 +10,7 @@ region = Rect2(12, 0, 12, 12)
 [resource]
 script = ExtResource("1_ga2rj")
 name = "Foxglove"
+maximum_quantity = 99
 icon = SubResource("AtlasTexture_wtkjc")
-stackable = false
 description = "Leaves of the Foxglove plant"
 metadata/_custom_type_script = "uid://co2o4mbdnsgju"

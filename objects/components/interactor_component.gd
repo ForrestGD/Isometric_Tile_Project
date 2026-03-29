@@ -3,6 +3,7 @@ class_name Interactor
 
 var interactables_list: Array[Interactable] = []
 @onready var label_container: BoxContainer = $BoxContainer
+const label_offset := Vector2(0, 40)
 
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
@@ -20,12 +21,15 @@ func _sort_by_closest_hovered(a: Interactable, b: Interactable) -> bool:
 		return false
 
 func _physics_process(delta: float) -> void:
-	interactables_list.sort_custom(_sort_by_closest_hovered)
-	if interactables_list.size() > 0:
-		label_container.visible = true
-		label_container.global_position = interactables_list[0].global_position
-	else:
+	if interactables_list.size() == 0:
 		label_container.visible = false
+	else:
+		interactables_list.sort_custom(_sort_by_closest_hovered)
+		if interactables_list[0].enabled:
+			label_container.visible = true
+			label_container.global_position = interactables_list[0].global_position - (label_container.size * label_container.scale / 2) - label_offset
+		else:
+			label_container.visible = false
 
 func _input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.is_action_pressed("interact"): return

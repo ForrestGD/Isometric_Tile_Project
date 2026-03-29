@@ -1,9 +1,46 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=11 format=3 uid="uid://tvxo6uh1sfrw"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=18 format=3 uid="uid://tvxo6uh1sfrw"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_a2pg3"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_v7k2x"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_h7g88"]
 [ext_resource type="Texture2D" uid="uid://ypixqagipm58" path="res://assets/sprites/plant_sprites/poppies_sprites/poppies_orange_atlas.tres" id="3_v7k2x"]
+[ext_resource type="Resource" uid="uid://b2l01s7fivru0" path="res://objects/item/items/poppies_orange.tres" id="5_7mjsl"]
+[ext_resource type="Resource" uid="uid://cy43ewbchufl4" path="res://objects/item/items/poppy_head.tres" id="6_0sa1e"]
+
+[sub_resource type="Resource" id="Resource_xlnc7"]
+script = ExtResource("1_a2pg3")
+from_stage_index = 0
+to_stage_index = 1
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_28nja"]
+script = ExtResource("1_a2pg3")
+from_stage_index = 1
+to_stage_index = 2
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_0r35x"]
+script = ExtResource("1_a2pg3")
+from_stage_index = 2
+to_stage_index = 3
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_43tp5"]
+script = ExtResource("1_a2pg3")
+from_stage_index = 3
+to_stage_index = 4
+time = 1.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_rw2sh"]
+script = ExtResource("1_a2pg3")
+from_stage_index = 4
+to_stage_index = 5
+time = 3.0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_h7g88"]
 script = ExtResource("3_h7g88")
@@ -27,18 +64,20 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [sub_resource type="Resource" id="Resource_yeb6d"]
 script = ExtResource("3_h7g88")
-interactable = false
+interactable = true
+item = ExtResource("5_7mjsl")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [sub_resource type="Resource" id="Resource_jjokg"]
 script = ExtResource("3_h7g88")
 interactable = true
+item = ExtResource("6_0sa1e")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]
 script = ExtResource("2_v7k2x")
 sprite = ExtResource("3_v7k2x")
 sprite_size = Vector2i(32, 32)
-stage_list = Array[Object]([SubResource("Resource_h7g88"), SubResource("Resource_2fblo"), SubResource("Resource_1cahw"), SubResource("Resource_dmet2"), SubResource("Resource_yeb6d"), SubResource("Resource_jjokg")])
-edge_list = Array[ExtResource("1_a2pg3")]([])
+stage_list = Array[ExtResource("3_h7g88")]([SubResource("Resource_h7g88"), SubResource("Resource_2fblo"), SubResource("Resource_1cahw"), SubResource("Resource_dmet2"), SubResource("Resource_yeb6d"), SubResource("Resource_jjokg")])
+edge_list = Array[ExtResource("1_a2pg3")]([SubResource("Resource_xlnc7"), SubResource("Resource_28nja"), SubResource("Resource_0r35x"), SubResource("Resource_43tp5"), SubResource("Resource_rw2sh")])
 metadata/_custom_type_script = "uid://c526tsy65chgj"

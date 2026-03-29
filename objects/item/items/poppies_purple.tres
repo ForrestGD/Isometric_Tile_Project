@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dybdurfnknyoh"]
+
+[ext_resource type="Texture2D" uid="uid://cqh7gxfwgmf0x" path="res://assets/sprites/item_sprites/item_texture_resources/poppies_purple_texture.tres" id="1_2wcye"]
+[ext_resource type="Script" uid="uid://co2o4mbdnsgju" path="res://objects/item/item_data.gd" id="2_2qnlu"]
+
+[resource]
+script = ExtResource("2_2qnlu")
+name = "Purple Poppies"
+maximum_quantity = 99
+icon = ExtResource("1_2wcye")
+description = ""
+metadata/_custom_type_script = "uid://co2o4mbdnsgju"

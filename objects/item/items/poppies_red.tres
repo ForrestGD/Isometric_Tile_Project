@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://wwlwlroadga6"]
+
+[ext_resource type="Texture2D" uid="uid://d2gb1dqvb50r7" path="res://assets/sprites/item_sprites/item_texture_resources/poppies_red_texture.tres" id="1_narfk"]
+[ext_resource type="Script" uid="uid://co2o4mbdnsgju" path="res://objects/item/item_data.gd" id="2_xbmnv"]
+
+[resource]
+script = ExtResource("2_xbmnv")
+name = "Red Poppies"
+maximum_quantity = 99
+icon = ExtResource("1_narfk")
+description = ""
+metadata/_custom_type_script = "uid://co2o4mbdnsgju"

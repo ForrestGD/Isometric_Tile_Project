@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=19 format=3 uid="uid://dwikw5etwki4b"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=20 format=3 uid="uid://dwikw5etwki4b"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_uhoqb"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_e3x7t"]
 [ext_resource type="Texture2D" uid="uid://ce76cpu05lq3u" path="res://assets/sprites/plant_sprites/lavender_sprite/lavender_atlas.tres" id="3_e3x7t"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_ok0ro"]
+[ext_resource type="Resource" uid="uid://cid76tnj2lp5f" path="res://objects/item/items/lavender.tres" id="5_v0r8t"]
 
 [sub_resource type="Resource" id="Resource_ok0ro"]
 script = ExtResource("1_uhoqb")
@@ -87,6 +88,7 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_2fyrv"]
 script = ExtResource("3_ok0ro")
 interactable = true
+item = ExtResource("5_v0r8t")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [resource]

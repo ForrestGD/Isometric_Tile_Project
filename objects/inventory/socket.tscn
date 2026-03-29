@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://cose271o3tswq"]
+[gd_scene load_steps=2 format=3 uid="uid://cose271o3tswq"]
 
-[ext_resource type="Texture2D" uid="uid://b3rmh45w7sha7" path="res://assets/sprites/item_sprites/item_atlas.tres" id="1_r4p8u"]
 [ext_resource type="Script" uid="uid://bklts140hmgcq" path="res://objects/inventory/socket.gd" id="1_xn7ay"]
 
 [node name="Socket" type="PanelContainer"]
@@ -18,7 +17,6 @@ theme_override_constants/margin_bottom = 4
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1_r4p8u")
 expand_mode = 1
 stretch_mode = 5
 

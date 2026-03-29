@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=25 format=3 uid="uid://3d3fcviof186"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=26 format=3 uid="uid://3d3fcviof186"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_7robv"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_4y2do"]
 [ext_resource type="Texture2D" uid="uid://df5jm3cbbmnil" path="res://assets/sprites/plant_sprites/stwart_sprite/stwart_atlas.tres" id="3_4y2do"]
 [ext_resource type="Script" uid="uid://co7vjo2luh6oi" path="res://objects/plants/stage_data.gd" id="3_jo3x4"]
+[ext_resource type="Resource" uid="uid://11ahqup15vag" path="res://objects/item/items/stwart.tres" id="5_0ragh"]
 
 [sub_resource type="Resource" id="Resource_jo3x4"]
 script = ExtResource("1_7robv")
@@ -118,6 +119,7 @@ metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 [sub_resource type="Resource" id="Resource_qn4v0"]
 script = ExtResource("3_jo3x4")
 interactable = true
+item = ExtResource("5_0ragh")
 metadata/_custom_type_script = "uid://co7vjo2luh6oi"
 
 [sub_resource type="Resource" id="Resource_1eb0s"]

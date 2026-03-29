@@ -42,16 +42,19 @@ func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
 		return null
 
 func pickup_socket_data(data: SocketData) -> bool:
-	for index in socket_data.size():
-		var data_at_index: SocketData = socket_data[index]
-		if data_at_index.can_merge_with_other(data):
-			data_at_index.merge_with_other(data)
-			inventory_updated.emit(self)
-			return true
+	var first_empty_index: int = socket_data.size()
 	for index in socket_data.size():
 		var data_at_index: SocketData = socket_data[index]
 		if not data_at_index:
-			socket_data[index] = data
+			first_empty_index = index
+		if data_at_index and data_at_index.can_merge_with_other(data):
+			data_at_index.merge_with_other(data)
+			inventory_updated.emit(self)
+			return true
+	if first_empty_index < socket_data.size():
+		var data_at_index: SocketData = socket_data[first_empty_index]
+		if not data_at_index:
+			socket_data[first_empty_index] = data
 			inventory_updated.emit(self)
 			return true
 	return false

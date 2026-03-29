@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b6qqi6olhsap7" path="res://assets/sprites/temp_chest_sprite.png" id="1_704ms"]
 [ext_resource type="Script" uid="uid://ckiklfkr74is8" path="res://objects/interaction/chest.gd" id="1_tu4pn"]
 [ext_resource type="Script" uid="uid://bugq23rwkojvy" path="res://objects/inventory/inventory_data.gd" id="2_3purb"]
-[ext_resource type="Script" uid="uid://d1frgy7jqmo5g" path="res://objects/components/interactable_component.gd" id="2_38hgl"]
 [ext_resource type="Script" uid="uid://0j8otjirtsc5" path="res://objects/inventory/socket_data.gd" id="3_het83"]
+[ext_resource type="PackedScene" uid="uid://c534gptxu1ptg" path="res://objects/interaction/interactable.tscn" id="5_3purb"]
 
 [sub_resource type="Resource" id="Resource_krrjs"]
 resource_local_to_scene = true
@@ -26,11 +26,4 @@ offset = Vector2(0, -16)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -18, 12, -12, 12, -8, 0, -2, -12, -8, -12, -12)
 
-[node name="Interactable" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 0
-script = ExtResource("2_38hgl")
-metadata/_custom_type_script = "uid://d1frgy7jqmo5g"
-
-[node name="InteractableArea" type="CollisionPolygon2D" parent="Interactable"]
-polygon = PackedVector2Array(0, -32, 14, -25, 14, -7, 0, 0, -14, -7, -14, -25)
+[node name="Interactable" parent="." instance=ExtResource("5_3purb")]

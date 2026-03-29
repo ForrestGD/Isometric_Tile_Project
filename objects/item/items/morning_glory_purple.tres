@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c7ck6po27ng8h"]
+
+[ext_resource type="Texture2D" uid="uid://1w5rgxoi5urs" path="res://assets/sprites/item_sprites/item_texture_resources/morning_glory_purple_texture.tres" id="1_5wxst"]
+[ext_resource type="Script" uid="uid://co2o4mbdnsgju" path="res://objects/item/item_data.gd" id="2_bgv11"]
+
+[resource]
+script = ExtResource("2_bgv11")
+name = "Purple Morning Glories"
+maximum_quantity = 99
+icon = ExtResource("1_5wxst")
+description = ""
+metadata/_custom_type_script = "uid://co2o4mbdnsgju"
