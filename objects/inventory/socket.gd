@@ -10,7 +10,7 @@ func set_socket_data(data: SocketData) -> void:
 	texture_rect.texture = item_data.icon
 	tooltip_text = "%s\n%s" % [item_data.name, item_data.description]
 
-	if data.quantity > 1 && item_data.maximum_quantity > 1:
+	if data.quantity > 1 and item_data.maximum_quantity > 1:
 		quantity_label.text = "x%s" % data.quantity
 		quantity_label.show()
 	else:

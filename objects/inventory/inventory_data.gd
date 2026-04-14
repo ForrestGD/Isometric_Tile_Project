@@ -22,7 +22,7 @@ func drop_socket_data(data: SocketData, index: int) -> SocketData:
 	var data_at_index: SocketData = socket_data[index]
 	var ret_data: SocketData
 	if data_at_index and data_at_index.can_merge_with_other(data):
-		data_at_index.merge_with_other(data)
+		socket_data[index].merge_with_other(data)
 	else:
 		socket_data[index] = data
 		ret_data = data_at_index
@@ -30,11 +30,10 @@ func drop_socket_data(data: SocketData, index: int) -> SocketData:
 	return ret_data
 
 func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
-	var data_at_index: SocketData = socket_data[index]
-	if not data_at_index:
+	if not socket_data[index]:
 		socket_data[index] = data.create_single_socket_data()
-	elif data_at_index.can_add_single_other(data):
-		data_at_index.merge_with_other(data.create_single_socket_data())
+	elif socket_data[index].can_add_single_other(data):
+		socket_data[index].merge_with_other(data.create_single_socket_data())
 	inventory_updated.emit(self)
 	if data.quantity > 0:
 		return data
@@ -42,19 +41,15 @@ func drop_single_socket_data(data: SocketData, index: int) -> SocketData:
 		return null
 
 func pickup_socket_data(data: SocketData) -> bool:
-	var first_empty_index: int = socket_data.size()
 	for index in socket_data.size():
-		var data_at_index: SocketData = socket_data[index]
-		if not data_at_index:
-			first_empty_index = index
-		if data_at_index and data_at_index.can_merge_with_other(data):
-			data_at_index.merge_with_other(data)
+		if socket_data[index] and socket_data[index].can_merge_with_other(data):
+			socket_data[index].merge_with_other(data)
 			inventory_updated.emit(self)
+			print("there are now {0} items in the stack".format([socket_data[index].quantity]))
 			return true
-	if first_empty_index < socket_data.size():
-		var data_at_index: SocketData = socket_data[first_empty_index]
-		if not data_at_index:
-			socket_data[first_empty_index] = data
+	for index in socket_data.size():
+		if not socket_data[index]:
+			socket_data[index] = data.duplicate()
 			inventory_updated.emit(self)
 			return true
 	return false
