@@ -15,7 +15,7 @@ func can_merge_with_other(other_socket_data: SocketData) -> bool:
         and quantity + other_socket_data.quantity <= item.maximum_quantity 
 
 func merge_with_other(other_socket_data: SocketData) -> void:
-    print("{0} items in this stack, {1} items in other stack, total of {2} items}".format([quantity, other_socket_data.quantity, quantity + other_socket_data.quantity]))
+    # print("{0} items in this stack, {1} items in other stack, total of {2} items}".format([quantity, other_socket_data.quantity, quantity + other_socket_data.quantity]))
     quantity += other_socket_data.quantity
 
 func create_single_socket_data() -> SocketData:

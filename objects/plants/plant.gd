@@ -8,10 +8,13 @@ class_name Plant
 
 var current_stage_index: int = 0
 var current_age: float = 0.0
+var interacted: bool = false
 static var group_name: String = "plant_group"
 
 func update_plant() -> void:
 	interactable.enabled = plant_data.stage_list[current_stage_index].interactable
+	if interacted:
+		interacted = false
 	sprite.region_rect = Rect2( \
 		plant_data.sprite_size.x * current_stage_index \
 		, 0 \
@@ -30,18 +33,35 @@ func _ready() -> void:
 		add_to_group(group_name)
 		interactable.interacted.connect(_plant_interact)
 
+func _plant_interact(_root: Node, _interactor: Interactor) -> void:
+	var current_stage: StageData = plant_data.stage_list[current_stage_index]
+	if interactable.enabled and current_stage.item and !interacted:
+		interacted = true
+		pickup_dropper.drop_item(current_stage.item, 1, self.position)
+
+
 func _physics_process(delta: float) -> void:
 	current_age += delta
 	var transitions_list: Array[TransitionData] = plant_data.get_transitions_from_stage(current_stage_index)
-	if transitions_list.size() >= 0:
+	if transitions_list.size() > 0:
 		for transition in transitions_list:
-			if current_age >= transition.time:
-				current_age -= transition.time
-				current_stage_index = transition.to_stage_index
-				update_plant()
-				break
-	
-func _plant_interact(_root: Node, _interactor: Interactor) -> void:
-	var current_stage: StageData = plant_data.stage_list[current_stage_index]
-	if interactable.enabled and current_stage.item:
-		pickup_dropper.drop_item(current_stage.item, 1, self.position)
+			if current_age >= transition.time and _evaluate_preconditions(transition):
+				if transition.to_stage_index == -1:
+					queue_free()
+					break
+				else:
+					current_age = 0
+					current_stage_index = transition.to_stage_index
+					update_plant()
+					break
+
+func _evaluate_preconditions(transition: TransitionData) -> bool:
+	var context := TransitionData.CONDITION
+	match[transition.precondition]:
+		[context.NONE]:
+			return true
+		[context.ON_HARVEST]:
+			return interacted
+		[context.DAY_ONLY or context.NIGHT_ONLY]:
+			return true
+	return false

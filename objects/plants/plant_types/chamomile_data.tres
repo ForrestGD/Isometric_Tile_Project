@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlantData" load_steps=19 format=3 uid="uid://bamqdlrnlgxht"]
+[gd_resource type="Resource" script_class="PlantData" load_steps=20 format=3 uid="uid://bamqdlrnlgxht"]
 
 [ext_resource type="Script" uid="uid://dvthsg0k82n15" path="res://objects/plants/transition_data.gd" id="1_hs4e1"]
 [ext_resource type="Script" uid="uid://c526tsy65chgj" path="res://objects/plants/plant_data.gd" id="2_135w4"]
@@ -11,6 +11,7 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 0
 to_stage_index = 1
 time = 1.0
+precondition = 0
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_66i58"]
@@ -18,6 +19,7 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 1
 to_stage_index = 2
 time = 1.0
+precondition = 0
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_47slv"]
@@ -25,6 +27,7 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 2
 to_stage_index = 3
 time = 1.0
+precondition = 0
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_2i3qu"]
@@ -32,6 +35,7 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 3
 to_stage_index = 4
 time = 1.0
+precondition = 0
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_fsr1c"]
@@ -39,6 +43,7 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 4
 to_stage_index = 5
 time = 1.0
+precondition = 0
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_h6mol"]
@@ -46,6 +51,15 @@ script = ExtResource("1_hs4e1")
 from_stage_index = 5
 to_stage_index = 6
 time = 1.0
+precondition = 0
+metadata/_custom_type_script = "uid://dvthsg0k82n15"
+
+[sub_resource type="Resource" id="Resource_dumoe"]
+script = ExtResource("1_hs4e1")
+from_stage_index = 6
+to_stage_index = -1
+time = 0.0
+precondition = 1
 metadata/_custom_type_script = "uid://dvthsg0k82n15"
 
 [sub_resource type="Resource" id="Resource_4cew1"]
@@ -89,5 +103,5 @@ script = ExtResource("2_135w4")
 sprite = ExtResource("3_ysedg")
 sprite_size = Vector2i(32, 32)
 stage_list = Array[ExtResource("4_nc6jg")]([SubResource("Resource_4cew1"), SubResource("Resource_ttjy0"), SubResource("Resource_y50yw"), SubResource("Resource_1cg5g"), SubResource("Resource_0sg0u"), SubResource("Resource_qlge7"), SubResource("Resource_0lfo2")])
-edge_list = Array[ExtResource("1_hs4e1")]([SubResource("Resource_7m1ir"), SubResource("Resource_66i58"), SubResource("Resource_47slv"), SubResource("Resource_2i3qu"), SubResource("Resource_fsr1c"), SubResource("Resource_h6mol")])
+edge_list = Array[ExtResource("1_hs4e1")]([SubResource("Resource_7m1ir"), SubResource("Resource_66i58"), SubResource("Resource_47slv"), SubResource("Resource_2i3qu"), SubResource("Resource_fsr1c"), SubResource("Resource_h6mol"), SubResource("Resource_dumoe")])
 metadata/_custom_type_script = "uid://c526tsy65chgj"

@@ -45,7 +45,7 @@ func pickup_socket_data(data: SocketData) -> bool:
 		if socket_data[index] and socket_data[index].can_merge_with_other(data):
 			socket_data[index].merge_with_other(data)
 			inventory_updated.emit(self)
-			print("there are now {0} items in the stack".format([socket_data[index].quantity]))
+			# print("there are now {0} items in the stack".format([socket_data[index].quantity]))
 			return true
 	for index in socket_data.size():
 		if not socket_data[index]:
